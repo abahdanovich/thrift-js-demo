@@ -13,7 +13,7 @@
     <script src="gen-js/hello_svc.js"></script>
     <script>
       (function() {
-        var transport = new Thrift.Transport("http://ubuntu.dev:9099/hello");
+        var transport = new Thrift.Transport("http://"+document.location.hostname+":9099/hello");
         var protocol  = new Thrift.Protocol(transport);
         var client    = new hello_svcClient(protocol);
         var nameElement = document.getElementById("name_in");
